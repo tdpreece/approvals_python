@@ -4,4 +4,4 @@ Some examples.
 
 .. code-block:: python
 
-    from approvals import ApprovalTest
+     from approvals import ApprovalTest
