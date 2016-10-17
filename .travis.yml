@@ -7,4 +7,6 @@ install: "pip install -r requirements.txt"
 # command to run tests
 script:
   - coverage run --source=approvals,test --parallel --branch -m unittest discover -p '*.py' -s 'test'
+  - coverage combine
+  - coverage report
   - flake8 approvals.py test
