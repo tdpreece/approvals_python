@@ -8,6 +8,13 @@ import unittest
 #
 # args = a_mock.call_args_list[0][0]
 # kwargs = a_mock.call_args_list[0][0]
+#
+# 1) Could pass a function into ctor that converts outputs and indirect outputs
+#   into primative types so that they can be compared with '=='.
+#   This is kind of similar to the way the existing Approvals Test Library works.
+#   The difference here is that:
+#     - inputs are recorded (useful when generating inputs from random numbers)
+#     - don't need to use an external diff tool to compare outputs
 
 # When recording inputs for the first time you need to comment
 # out verify.  If you don't you will get an iteration error
