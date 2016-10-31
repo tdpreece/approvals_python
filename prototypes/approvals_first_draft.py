@@ -39,4 +39,4 @@ class ApprovalTest(object):
         )
         with open(expected_outputs_filename, 'r') as expected_outputs_file:
             expected_outputs = pickle.load(expected_outputs_file)
-        all(self.outputs_equal(x[0], x[1]) for x in zip(expected_outputs, outputs))
+        assert all(self.outputs_equal(x[0], x[1]) for x in zip(expected_outputs, outputs))
